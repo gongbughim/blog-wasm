@@ -16,8 +16,8 @@ jobs:
         with:
           version: 'latest'
       - run: wasm-pack build --target web
-      - run: tar -czvf blog-wasm.tar.gz pkg/
+      - run: tar -czvf blogwasm.tar.gz pkg/
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: blog-wasm.tar.gz
+          files: blogwasm.tar.gz
